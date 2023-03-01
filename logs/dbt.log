@@ -1,0 +1,27 @@
+
+
+============================== 2023-03-01 10:55:51.717205 | 069d3f2d-133a-4f88-8db4-c4c3f04bce6a ==============================
+[0m10:55:51.717205 [info ] [MainThread]: Running with dbt=1.4.4
+[0m10:55:51.719961 [debug] [MainThread]: running dbt with arguments {'write_json': True, 'use_colors': True, 'printer_width': 80, 'version_check': True, 'partial_parse': True, 'static_parser': True, 'profiles_dir': '/home/clauro/.dbt', 'send_anonymous_usage_stats': True, 'quiet': False, 'no_print': False, 'cache_selected_only': False, 'project_name': 'dbtlearn', 'skip_profile_setup': False, 'which': 'init', 'indirect_selection': 'eager'}
+[0m10:55:51.720213 [debug] [MainThread]: Tracking: tracking
+[0m10:55:51.721893 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a3fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a3d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a30a0>]}
+[0m10:55:51.723512 [debug] [MainThread]: Starter project path: /home/clauro/.local/lib/python3.10/site-packages/dbt/include/starter_project
+[0m10:57:37.807191 [info ] [MainThread]: Profile dbtlearn written to /home/clauro/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m10:57:37.807791 [info ] [MainThread]: 
+Your new dbt project "dbtlearn" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m10:57:37.808250 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a3d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a30d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f20d87a2fe0>]}
+[0m10:57:37.808631 [debug] [MainThread]: Flushing usage events
