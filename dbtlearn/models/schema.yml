@@ -26,5 +26,39 @@ models:
                      'Shared room',
                      'Hotel room']
     - name: minimum_nights
+      description: '{{ doc("dim_listing_cleansed__minimum_nights") }}'
       tests:
         - positive_value
+
+
+  - name: dim_hosts_cleansed
+    description: Cleansed table containing Airbnb Hosts basic information.
+
+    columns:
+      
+      - name: CREATED_AT
+        description: When the host joined the App
+        tests:
+          - not_null
+
+      - name: UPDATED_AT
+        description: Last time the host information has been updated
+        tests:
+          - not_null
+      
+      - name: HOST_ID
+        description: Host's unique ID
+        tests:
+          - not_null
+          - unique
+      
+      - name: HOST_NAME
+        description: Host's Name
+        tests:
+          - not_null
+          - dbt_utils.not_empty_string
+      
+      - name: IS_SUPERHOST
+        description: If Host's is IS_SUPERHOST or not 
+        tests:
+          - dbt_utils.not_empty_string
