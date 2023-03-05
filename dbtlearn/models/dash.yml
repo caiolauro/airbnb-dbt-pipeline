@@ -1,0 +1,14 @@
+version: 2
+
+exposures:
+  - name: Executive Dashboard
+    type: dashboard
+    maturity: low
+    url: https://0cd745cd.us1a.app.preset.io/superset/dashboard/p/EkBdOQg3ver/
+    description: Executive Dashboard about Airbnb listings and hosts
+    depends_on:
+      - ref('dim_listings_w_hosts')
+      - ref('mart_full_moon_reviews')
+    owner:
+      name: Caio Lauro
+      email: caiolauro@gmail.com
