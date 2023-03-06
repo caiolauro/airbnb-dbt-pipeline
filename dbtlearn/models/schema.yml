@@ -62,3 +62,24 @@ models:
         description: If Host's is IS_SUPERHOST or not 
         tests:
           - dbt_utils.not_empty_string
+          
+  - name: dim_listings_w_hosts
+    tests:
+      - dbt_expectations.expect_table_row_count_to_equal_other_table:
+          compare_model: source("airbnb", "listings")
+          factor: 1 # (Optional)
+          row_condition: "listing_id is not null" # (Optional)
+          compare_row_condition: "id is not null" # (Optional)
+    columns:
+      - name: price
+        tests:
+          - dbt_expectations.expect_column_quantile_values_to_be_between:
+              quantile: .99
+              min_value: 50 # (Optional)
+              max_value: 500 # (Optional)
+          - dbt_expectations.expect_column_max_to_be_between:
+              max_value: 5000 # (Optional)
+              config:
+                severity: warn
+          - dbt_expectations.expect_column_values_to_be_of_type:
+              column_type: number
